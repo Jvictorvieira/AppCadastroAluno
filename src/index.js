@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './componentes/App/App';
+import Navbar from './componentes/Navbar/Navbar';
+import TelaPrincipal from './pages/TelaPrincipal/TelaPrincipal';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <>
+    <Navbar/>
+    <TelaPrincipal/>
+  </>,
   document.getElementById('root')
 );
