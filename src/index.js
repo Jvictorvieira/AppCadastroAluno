@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './componentes/App/App';
+import Navbar from './componentes/Navbar/Navbar';
 import Button from './componentes/Button/Button';
 import FormInput from './componentes/Input/Input';
 
 ReactDOM.render(
   <>
-    <App></App>
+    <Navbar/>
     <Button color='btn-primary' onClick={''}>Novo</Button>
     <FormInput label={'oi'} placeholder={'aqui'}></FormInput>
   </>,
