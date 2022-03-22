@@ -1,13 +1,13 @@
-import './Input.css';
+import "./Input.css";
 
 function FormInput(props) {
-    const {label, onChange, id, ...inputProps} = props
+  const { labelText, labelClass, onChange, id, ...inputProps } = props;
   return (
     <>
-        <label>{label}</label>
-        <input {...inputProps} className='form-control' onChange={onChange}></input>
-    </>  
+      <label labelClass={labelClass}>{props.labelText}</label>
+      <input {...inputProps} onChange={onChange}></input>
+    </>
   );
 }
- 
-export default FormInput; 
+
+export default FormInput;
