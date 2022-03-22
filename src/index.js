@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Navbar from './componentes/Navbar/Navbar';
-import Button from './componentes/Button/Button';
-import FormInput from './componentes/Input/Input';
+import TelaPrincipal from './pages/TelaPrincipal/TelaPrincipal';
+
 
 ReactDOM.render(
   <>
     <Navbar/>
-    <Button color='btn-primary' onClick={''}>Novo</Button>
-    <FormInput label={'oi'} placeholder={'aqui'}></FormInput>
+    <TelaPrincipal/>
   </>,
   document.getElementById('root')
 );
