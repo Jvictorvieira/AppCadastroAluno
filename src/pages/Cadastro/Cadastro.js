@@ -3,9 +3,9 @@ import Button from "../../componentes/Button/Button";
 import FormInput from "../../componentes/Input/Input";
 import "./Cadastro.css";
 import { useState } from "react";
-
+import {useNavigate } from 'react-router-dom';
 function Cadastro() {
-  var arrayKey = [];
+  const navigate = useNavigate();
   const [values, setValue] = useState({
     nome:"",
     cpf:"",
@@ -17,18 +17,9 @@ function Cadastro() {
     setValue({...values, [event.target.name]: event.target.value});
   };
   
-  const onClick = () => {
-    var user = Math.floor(Math.random() * 1000000)
-    localStorage.setItem(user, JSON.stringify(values));
-    arrayKey.push(user)
-  }
-  
-  
   const handleSubmit = (e) =>{
     e.preventDefault();
   };
-
-  
 
   return (
     <div className="row justify-content-center m-4">
@@ -78,7 +69,7 @@ function Cadastro() {
             <Button type="submit" style="btn btn-primary" >
               Cadastrar
             </Button>
-            <Button style="btn btn-primary" >
+            <Button onClick={()=> {navigate("/")}} style="btn btn-primary" >
               Voltar
             </Button>
           </div>

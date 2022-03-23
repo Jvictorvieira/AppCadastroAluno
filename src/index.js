@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Navbar from './componentes/Navbar/Navbar';
-import TelaPrincipal from './pages/TelaPrincipal/TelaPrincipal';
-import Cadastro from './pages/Cadastro/Cadastro';
+import Rota from './componentes/Rotas/Rotas';
 
 ReactDOM.render(
   <>
     
     <Navbar/>
-    <Cadastro/>
-    
+    <Rota/>
   </>,
   document.getElementById('root')
 );
