@@ -5,21 +5,36 @@ import "./Cadastro.css";
 import { useState } from "react";
 
 function Cadastro() {
+  var arrayKey = [];
   const [values, setValue] = useState({
     nome:"",
     cpf:"",
     avaliacao:""
   });
+
   const onChange = (event) => {
-    localStorage.setItem(event.target.name, event.target.value);
+    localStorage.setItem(event.target.cpf, values);
     setValue({...values, [event.target.name]: event.target.value});
   };
-  console.log(values);
+  
+  const onClick = () => {
+    var user = Math.floor(Math.random() * 1000000)
+    localStorage.setItem(user, JSON.stringify(values));
+    arrayKey.push(user)
+  }
+  
+  
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+  };
+
+  
+
   return (
     <div className="row justify-content-center m-4">
       <div className="card p-0 col-sm-6">
         <div className="card-header bg-primary text-white fw-bold">Cadastro</div>
-        <form className="row g-3 p-0 m-2">
+        <form className="row g-3 p-0 m-2" onSubmit={handleSubmit}>
           <div className="col-12">
             <FormInput 
                 type="text"
@@ -29,6 +44,7 @@ function Cadastro() {
                 placeholder="Nome"
                 value={values["nome"]}
                 name="nome"
+                pattern="^[A-Za-z0-9]{6,40}$"
                 onChange={onChange}
             />
           </div>
@@ -38,9 +54,10 @@ function Cadastro() {
               labelText="CPF:"
               labelclass="form-label"
               className="form-control"
-              placeholder="___.___.___-__"
+              placeholder="999.999.999-99"
               value={values["cpf"]}
               name="cpf"
+              pattern="^[0-9]{11}$"
               onChange={onChange}
             />
           </div>
@@ -53,6 +70,7 @@ function Cadastro() {
               placeholder="0 - 10"
               value={values["avaliacao"]}
               name="avaliacao"
+              pattern="^[0-9]{0,10}$"
               onChange={onChange}
             />
           </div>
@@ -60,7 +78,7 @@ function Cadastro() {
             <Button type="submit" style="btn btn-primary" >
               Cadastrar
             </Button>
-            <Button style="btn btn-primary">
+            <Button style="btn btn-primary" >
               Voltar
             </Button>
           </div>

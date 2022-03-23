@@ -10,7 +10,7 @@ ReactDOM.render(
     
     <Navbar/>
     <Cadastro/>
-    <TelaPrincipal/>
+    
   </>,
   document.getElementById('root')
 );
