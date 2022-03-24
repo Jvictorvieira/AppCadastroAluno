@@ -5,23 +5,23 @@ import "./Cadastro.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Cadastro() {
+function Cadastro(props) {
+  
   const navigate = useNavigate();
   const [values, setValue] = useState({
+    matricula: "",
     nome: "",
     cpf: "",
     avaliacao: "",
   });
 
   const onChange = (event) => {
-    localStorage.setItem(event.target.cpf, values);
-    setValue({ ...values, [event.target.name]: event.target.value });
+    setValue({ ...values, [event.target.name]: event.target.value, ['matricula']: props.listaAlunos.length + 1 });
   };
-
+  console.log(values)
   const handleSubmit = (event) => {
     event.preventDefault();
-    let chave = localStorage.length;
-    localStorage.setItem(chave, JSON.stringify(values));
+    props.setLista((prevLista)=> ([...prevLista, values]))
   };
 
   return (
