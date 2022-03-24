@@ -30,11 +30,10 @@ function Rota() {
       avaliacao: 10
     }
   ]);
-  console.log(listaAlunos)
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<TelaPrincipal lista={listaAlunos}/>} />
+        <Route path='/' element={<TelaPrincipal setLista={setLista} listaAlunos={listaAlunos}/>} />
         <Route path='/Cadastro' element={<Cadastro setLista={setLista} listaAlunos={listaAlunos}/>} />
       </Routes>
     </Router>
