@@ -30,7 +30,7 @@ function TelaPrincipal(props) {
     labels: grafico.labels,
     datasets: [
       {
-        label: "My First dataset",
+        label: "Notas",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
         data: grafico.data,

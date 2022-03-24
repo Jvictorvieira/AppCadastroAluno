@@ -62,7 +62,7 @@ function Cadastro(props) {
           </div>
           <div className="col-md-6">
             <FormInput
-              type="text"
+              type="number"
               labelText="Avaliação:"
               labelclass="form-label"
               className="form-control"
@@ -70,6 +70,8 @@ function Cadastro(props) {
               value={values["avaliacao"]}
               name="avaliacao"
               pattern="^[0-9]{0,2}$"
+              min="0" 
+              max="10"
               onChange={onChange}
             />
           </div>
