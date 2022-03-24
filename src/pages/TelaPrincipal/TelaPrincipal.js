@@ -85,8 +85,8 @@ function TelaPrincipal(props) {
                 <p className="fw-bold">{aluno.cpf}</p>
                 <p className="fw-bold">{aluno.avaliacao}</p>
                 <div className="">
-                  <Button style="btn btn-warning">Alterar</Button>
-                  <Button style="btn btn-danger">Remover</Button>
+                  <Button style="btn btn-warning" onClick={() => navigate("/Alterar")}>Alterar</Button>
+                  <Button style="btn btn-danger" onClick={() => navigate("/Remover")}>Remover</Button>
                 </div>
               </li>
             ))}

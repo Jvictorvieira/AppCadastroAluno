@@ -1,5 +1,7 @@
 import TelaPrincipal from "../../pages/TelaPrincipal/TelaPrincipal";
 import Cadastro from "../../pages/Cadastro/Cadastro";
+import Alterar from "../../pages/Alterar/Alterar";
+import Remover from "../../pages/Remover/Remover";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
@@ -43,7 +45,14 @@ function Rota() {
           path="/Cadastro"
           element={<Cadastro setLista={setLista} listaAlunos={listaAlunos} />}
         />
-      </Routes>
+        <Route
+          path="/Alterar" element={<Alterar/>}
+        />
+        <Route
+          path="/Remover" element={<Remover/>}
+        />
+        </Routes>
+        
     </Router>
   );
 }
