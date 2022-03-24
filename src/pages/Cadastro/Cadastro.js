@@ -3,40 +3,45 @@ import Button from "../../componentes/Button/Button";
 import FormInput from "../../componentes/Input/Input";
 import "./Cadastro.css";
 import { useState } from "react";
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 function Cadastro() {
   const navigate = useNavigate();
   const [values, setValue] = useState({
-    nome:"",
-    cpf:"",
-    avaliacao:""
+    nome: "",
+    cpf: "",
+    avaliacao: "",
   });
 
   const onChange = (event) => {
     localStorage.setItem(event.target.cpf, values);
-    setValue({...values, [event.target.name]: event.target.value});
+    setValue({ ...values, [event.target.name]: event.target.value });
   };
-  
-  const handleSubmit = (e) =>{
-    e.preventDefault();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let chave = localStorage.length;
+    localStorage.setItem(chave, JSON.stringify(values));
   };
 
   return (
     <div className="row justify-content-center m-4">
       <div className="card p-0 col-sm-6">
-        <div className="card-header bg-primary text-white fw-bold">Cadastro</div>
+        <div className="card-header bg-primary text-white fw-bold">
+          Cadastro
+        </div>
         <form className="row g-3 p-0 m-2" onSubmit={handleSubmit}>
           <div className="col-12">
-            <FormInput 
-                type="text"
-                labelText="Nome:"
-                labelclass="form-label"
-                className="form-control"
-                placeholder="Nome"
-                value={values["nome"]}
-                name="nome"
-                pattern="^[A-Za-z0-9]{6,40}$"
-                onChange={onChange}
+            <FormInput
+              type="text"
+              labelText="Nome:"
+              labelclass="form-label"
+              className="form-control"
+              placeholder="Nome"
+              value={values["nome"]}
+              name="nome"
+              pattern="^[A-Za-z0-9]{6,40}$"
+              onChange={onChange}
             />
           </div>
           <div className="col-md-6">
@@ -66,10 +71,10 @@ function Cadastro() {
             />
           </div>
           <div className="col-12 d-flex justify-content-evenly">
-            <Button type="submit" style="btn btn-primary" >
+            <Button type="submit" style="btn btn-primary">
               Cadastrar
             </Button>
-            <Button onClick={()=> {navigate("/")}} style="btn btn-primary" >
+            <Button style="btn btn-info" onClick={() => navigate("/")}>
               Voltar
             </Button>
           </div>

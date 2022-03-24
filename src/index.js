@@ -6,7 +6,6 @@ import Rota from './componentes/Rotas/Rotas';
 
 ReactDOM.render(
   <>
-    
     <Navbar/>
     <Rota/>
   </>,
