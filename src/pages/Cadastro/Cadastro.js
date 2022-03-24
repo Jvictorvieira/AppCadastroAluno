@@ -6,7 +6,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Cadastro(props) {
-  
   const navigate = useNavigate();
   const [values, setValue] = useState({
     matricula: "",
@@ -16,12 +15,16 @@ function Cadastro(props) {
   });
 
   const onChange = (event) => {
-    setValue({ ...values, [event.target.name]: event.target.value, ['matricula']: props.listaAlunos.length + 1 });
+    setValue({
+      ...values,
+      [event.target.name]: event.target.value,
+      ["matricula"]: props.listaAlunos.length + 1,
+    });
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.setLista((prevLista)=> ([...prevLista, values]))
-    navigate("/")
+    props.setLista((prevLista) => [...prevLista, values]);
+    navigate("/");
   };
 
   return (
@@ -66,7 +69,7 @@ function Cadastro(props) {
               placeholder="0 - 10"
               value={values["avaliacao"]}
               name="avaliacao"
-              pattern="^[0-10]{0,2}$"
+              pattern="^[0-9]{0,2}$"
               onChange={onChange}
             />
           </div>
