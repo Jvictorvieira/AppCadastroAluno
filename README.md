@@ -19,33 +19,40 @@ $ yarn install
 # Inicie o app
 $ yarn start
 
-# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+# O servidor inciará na porta:3000 - acesse 
+<http://localhost:3000>
 ```
 ### Atividades realizadas
 
 - [x] Tela Principal
-- [x] Botão Novo que redireciona para tela de Cadastro
-- [x] Botão Gráfico sem funcionalidade
-- [x] Listas de Alunos com dados mockados
-- [x] Botão Alterar e Remover sem funcionalidade
-
+- [x] Tela Alterar
+- [x] Tela Remover
 - [x] Tela de Cadastro 
+- [x] Botão Novo que redireciona para tela de Cadastro
+- [x] Botão Gráfico 
+- [x] Listas de Alunos com dados mockados
+- [x] Botão Alterar e Remover que para as telas de Alterar e Remover respectivamente
 - [x] Formulário 
-- [x] Resgistro dos dados inseridos em tempo real no localStorage
-- [x] Botão de Cadastrar que registra o valores no localStorage
+- [x] Resgistro dos dados inseridos em tempo real 
+- [x] Botão de Cadastrar que registra o valores na lista utilizando uma lista de objeto no useState
 - [x] Botão Voltar que redireciona para Tela Principal
+- [x] Plotar Gráficos na Tela Principal
 
 ### To Do
-- [ ] Tela Alterar
-- [ ] Tela Remover
-- [ ] Função para chamar dados no localStorage
-- [ ] Função para fazer listagem dinâmica de alunos cadastrados no localStorage
-- [ ] Plotar Gráficos na Tela Principal
+
+- [ ] Função para Remover e Alterar
+- [ ] Melhorar estilo das páginas
+- [ ] Arquitetura de arquivos
+- [ ] Validação do formulário
+- [ ] Reaproveitar código
 
 ### Dificuldades
-- Recuperar listas de objetos salvos no localStorage
+
+- Utilizar lista dinâmica para as funcionalidades sugeridas
 - Roteamento de páginas
 - Utilização e implementação do Chart.js
 
+### Resumo
 
+ Foi priorizado as funcionalidades pedidas, algumas das funcionalidades foram cumpridas, outras não, porém tentei deixar mais próximo para finalização. Também tentei reaproveitar o máximo de código, mas é algo que pode ser melhorado. E a estilização pode ser melhorada, mas não foi uma prioridade.
 

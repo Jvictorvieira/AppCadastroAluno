@@ -11,7 +11,7 @@ function Rota() {
       matricula: 1,
       nome: "Ravena",
       cpf: "00000000000",
-      avaliacao: 10,
+      avaliacao: 7,
     },
     {
       matricula: 2,
@@ -23,13 +23,13 @@ function Rota() {
       matricula: 3,
       nome: "Victor",
       cpf: "12345678911",
-      avaliacao: 10,
+      avaliacao: 3,
     },
     {
       matricula: 4,
       nome: "Garfield",
       cpf: "12345678922",
-      avaliacao: 10,
+      avaliacao: 8,
     },
   ]);
   return (
