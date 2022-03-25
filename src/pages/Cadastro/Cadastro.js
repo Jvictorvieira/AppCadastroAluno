@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../../componentes/Button/Button";
 import FormInput from "../../componentes/Input/Input";
-import "./Cadastro.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 

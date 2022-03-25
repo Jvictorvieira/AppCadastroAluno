@@ -1,5 +1,4 @@
 import Button from "../../componentes/Button/Button";
-import "./TelaPrincipal.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Chart, registerables } from "chart.js";
