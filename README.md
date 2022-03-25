@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Teste Desenvolvimento WEB (Front) Sistema de Gestão de Alunos – BZU Tech
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## João Victor Vieira Silva dos Santos
+## Estágio BZU Tech Front-End
 
-## Available Scripts
+## O projeto foi desenvolvido em React e para estilização foi utilizado Bootstrap 5. Foi iniciado um projeto padrão com create-react-app, porém foram excluídos os arquivos que não seria utilizados neste desafio.
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+### Como rodar
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+# Clone este repositório
+$ git clone <https://github.com/Jvictorvieira/AppCadastroAluno.git>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Instale as dependências
+$ yarn install
 
-### `yarn test`
+# Inicie o app
+$ yarn start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# O servidor inciará na porta:3000 - acesse 
+<http://localhost:3000>
+```
+### Atividades realizadas
 
-### `yarn build`
+- [x] Tela Principal
+- [x] Tela Alterar
+- [x] Tela Remover
+- [x] Tela de Cadastro 
+- [x] Botão Novo que redireciona para tela de Cadastro
+- [x] Botão Gráfico 
+- [x] Listas de Alunos com dados mockados
+- [x] Botão Alterar e Remover que para as telas de Alterar e Remover respectivamente
+- [x] Formulário 
+- [x] Resgistro dos dados inseridos em tempo real 
+- [x] Botão de Cadastrar que registra o valores na lista utilizando uma lista de objeto no useState
+- [x] Botão Voltar que redireciona para Tela Principal
+- [x] Plotar Gráficos na Tela Principal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### To Do
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ ] Função para Remover e Alterar
+- [ ] Melhorar estilo das páginas
+- [ ] Arquitetura de arquivos
+- [ ] Validação do formulário
+- [ ] Reaproveitar código
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Dificuldades
 
-### `yarn eject`
+- Utilizar lista dinâmica para as funcionalidades sugeridas
+- Roteamento de páginas
+- Utilização e implementação do Chart.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Resumo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ Foi priorizado as funcionalidades pedidas, algumas das funcionalidades foram cumpridas, outras não, porém tentei deixar mais próximo para finalização. Também tentei reaproveitar o máximo de código, mas é algo que pode ser melhorado. E a estilização pode ser melhorada, mas não foi uma prioridade.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
