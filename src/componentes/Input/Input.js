@@ -1,5 +1,3 @@
-import "./Input.css";
-
 function FormInput(props) {
   const { labelText, labelclass, onChange, ...inputProps } = props;
   return (
