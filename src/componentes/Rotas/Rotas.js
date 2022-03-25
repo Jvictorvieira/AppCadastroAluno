@@ -46,10 +46,10 @@ function Rota() {
           element={<Cadastro setLista={setLista} listaAlunos={listaAlunos} />}
         />
         <Route
-          path="/Alterar" element={<Alterar/>}
+          path="/Alterar" element={<Alterar setLista={setLista} listaAlunos={listaAlunos}/>}
         />
         <Route
-          path="/Remover" element={<Remover/>}
+          path="/Remover" element={<Remover setLista={setLista} listaAlunos={listaAlunos}/>}
         />
         </Routes>
         

@@ -5,6 +5,12 @@ import { useState } from "react";
 import { Chart, registerables } from "chart.js";
 
 function TelaPrincipal(props) {
+  function SetAluno(aluno,index) {
+    navigate("/Alterar", {state:{id:index, aluno:aluno}});
+  }
+  function DeleteAluno(aluno,index) {
+    navigate("/Remover", {state:{id:index, aluno:aluno}});
+  }
   Chart.register(...registerables);
   function datas() {
     let lista = [];
@@ -19,7 +25,6 @@ function TelaPrincipal(props) {
     for (var i in props.listaAlunos) {
       lista.push(props.listaAlunos[i].nome);
     }
-    console.log(lista);
     return lista;
   }
   const [grafico, setgrafico] = useState({
@@ -85,8 +90,9 @@ function TelaPrincipal(props) {
                 <p className="fw-bold">{aluno.cpf}</p>
                 <p className="fw-bold">{aluno.avaliacao}</p>
                 <div className="">
-                  <Button style="btn btn-warning" onClick={() => navigate("/Alterar")}>Alterar</Button>
-                  <Button style="btn btn-danger" onClick={() => navigate("/Remover")}>Remover</Button>
+                  <Button style="btn btn-warning m-1" 
+                  onClick={() => SetAluno(aluno,index)}>Alterar</Button>
+                  <Button style="btn btn-danger m-1" onClick={() => DeleteAluno(aluno,index)}>Remover</Button>
                 </div>
               </li>
             ))}
